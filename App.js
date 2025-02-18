@@ -9,26 +9,34 @@ import ClickCounter from './components/useState/ClickCounter';
 import RegistrationForm from './components/Botones/RegistrationForm';
 import ThemeSwitcher from './components/Botones/ThemeSwitcher';
 import AlertButton from './components/Botones/AlertButton';
+import ParentCounter from './components/punto4/ejercicio1/ParentCounter'
+import Game from './components/punto4/ejercicio3/Game'
+import ImageGallery from './components/punto4/ejercicio2/ImageGallery';
 
 export default function App() {
-  // const [name, setName] = useState('Wilfred');
 
-  // const [nombre, setNombre] = useState('Wilfred');
-  // const [edad, setEdad] = useState(25);
-  // const [ocupacion, setOcupacion] = useState('Desarrollador Software');
+  //? Ejercicios punto 1
+  //! 1.1 
+  const [name, setName] = useState('Wilfred');
 
-  // const task = { title: "Ejercicio 3 ", complete: "completado" };
+  //! 1.2
+  const [nombre, setNombre] = useState('Wilfred');
+  const [edad, setEdad] = useState(19);
+  const [ocupacion, setOcupacion] = useState('Desarrollador Software');
 
+  //! 1.3
+  const task = { title: "Ejercicio 3 ", complete: "completado" };
+
+
+  //? Ejercicios punto 3
   //! 3.1
   const [userInfo, setUserInfo] = useState({ nombre: '', correo: '', contrasena: '' });
   const handleInformacion = (informacion) => {
     setUserInfo(informacion);
   }
 
-
   //! 3.2
   const [thema, setThema] = useState(false);
-
   const handleCambioTema = () => {
     setThema(!thema);
   }
@@ -40,12 +48,31 @@ export default function App() {
 
   return (
     <View style={thema ? styles.containerNegro : styles.containerClaro}>
-      {/* <Greeting name={name} />
-      <UserDetails nombre={nombre} edad={edad} ocupacion={ocupacion} />
-      <Task task={task} /> 
-      <ToggleText /> 
-      <DynamicForm /> 
-      <ClickCounter /> */}
+      {/*  Ejercicio 1.1
+      <Greeting name={name} /> 
+      */}
+
+      {/* Ejercicio 1.2
+      <DynamicForm />  
+      */}
+
+      {/* Ejercicio 1.3 
+      <ClickCounter />  
+      */}
+
+
+
+      {/* Ejercicio 2.1
+      <UserDetails nombre={nombre} edad={edad} ocupacion={ocupacion} /> 
+      */}
+
+      {/*  Ejercicio 2.2
+      <Task task={task} />  
+      */}
+
+      {/* Ejercicio 2.3 
+      <ToggleText />  
+      */}
 
 
       {/* Ejercicio 3.1
@@ -54,12 +81,31 @@ export default function App() {
       <Text>Correo: {userInfo.correo}</Text>
       <Text>Contrasena: {userInfo.contrasena}</Text> */}
 
+
       {/* Ejercicio 3.2 
       <ThemeSwitcher onCambioTema={handleCambioTema} />
       <Text>{!thema ? 'Claro' : 'Oscuro'}</Text> */}
 
+
       {/* Ejercicio 3.3 
       <AlertButton mensaje={mensaje} /> */}
+
+
+      {/* Ejercicio 4.1
+      <ParentCounter />
+       */}
+
+
+      {/* Ejercicio 4.2 
+      <ImageGallery />
+      */}
+
+
+      {/* Ejercicio 4.3 
+      <Game />
+      */}
+
+      <Text>Wilfred Tovar Escobar</Text>
     </View>
   );
 }
