@@ -1,4 +1,4 @@
-# taller Desarrollo Movil
+# Taller Desarrollo Movil
 
 ```bash
 git clone https://github.com/Tovar-D3v/tallerMovil1.git
